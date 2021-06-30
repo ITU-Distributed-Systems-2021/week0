@@ -1,10 +1,11 @@
-package hello
+package main
 
 import (
-	"testing"
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 func Test_echo(t *testing.T) {
-	assert.Equal(t, "hello", echo("hello"))
+	said := Echo("hello")
+	assert.Equal(t, "hello", said)
 }
