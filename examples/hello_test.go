@@ -6,6 +6,6 @@ import (
 )
 
 func Test_echo(t *testing.T) {
-	said := Echo("hello")
+	said := echo("hello")
 	assert.Equal(t, "hello", said)
 }
