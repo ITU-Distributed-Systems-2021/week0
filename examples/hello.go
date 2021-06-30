@@ -3,10 +3,10 @@ package main
 import "fmt"
 
 func main() {
-	say := Echo("hello")
+	say := echo("hello")
 	fmt.Println(say)
 }
 
-func Echo(yell string) string {
+func echo(yell string) string {
 	return yell
 }
