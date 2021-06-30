@@ -1,15 +1,17 @@
 .PHONY: install lint test
 
-default: lint, test
+default: lint test
 
 install:
 	@go version &&\
     go get -u golang.org/x/lint/golint
 
 lint:
-	@go vet ./... &&\
+	@cd examples && \
+	go vet ./... &&\
 	golint ./...
 
 
 test:
-	@go test ./...
+	@cd examples && \
+	go test ./...
