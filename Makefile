@@ -1,7 +1,15 @@
-.PHONY: install test
+.PHONY: install lint test
 
-test:
-	go test ./...
+default: lint, test
 
 install:
-	go mod download
+	@go version &&\
+    go get -u golang.org/x/lint/golint
+
+lint:
+	@go vet ./... &&\
+	golint ./...
+
+
+test:
+	@go test ./...
