@@ -1,4 +1,7 @@
-.PHONY: test
+.PHONY: install test
 
-test:
+test: install
 	go test ./...
+
+install:
+	go mod download
