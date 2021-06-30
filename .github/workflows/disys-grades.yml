@@ -17,6 +17,8 @@ jobs:
       - name: Check version and install lint
         run: make install
       - name: Run vet and lint
-        run: make lint
+        run: |
+          ls -al
+          make lint
       - name: Runs unit tests
         run: make test
