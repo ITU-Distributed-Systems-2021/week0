@@ -1,5 +1,6 @@
 name: DISYS autograde
   on: [ push,workflow_dispatch ]
+
   jobs:
     build:
       name: Autograding
